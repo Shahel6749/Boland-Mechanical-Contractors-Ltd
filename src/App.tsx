@@ -399,7 +399,7 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center overflow-hidden" aria-label="Hero">
+      <section className="relative min-h-[100dvh] flex items-center overflow-hidden pt-32 pb-24" aria-label="Hero">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0" aria-hidden="true">
           <img
@@ -413,7 +413,7 @@ export default function App() {
           <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
         </div>
 
-        <div id="main-content" className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-20">
+        <div id="main-content" className="relative z-10 max-w-7xl mx-auto px-6 w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -426,7 +426,7 @@ export default function App() {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-display font-bold text-ink leading-[1.1] mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-ink leading-[1.1] mb-6">
               Calgary's Emergency
               <br />
               <span className="relative inline-block">
@@ -443,9 +443,9 @@ export default function App() {
             </h1>
 
             {/* Response time guarantee pill */}
-            <div className="inline-flex items-center gap-2 bg-ink text-gold rounded-full px-5 py-2.5 text-sm font-bold mb-8 shadow-xl">
-              <Clock size={16} aria-hidden="true" />
-              Same-day service, 24/7 emergency response
+            <div className="inline-flex items-start sm:items-center gap-2 bg-ink text-gold rounded-2xl sm:rounded-full px-5 py-3 text-sm font-bold mb-8 shadow-xl text-left">
+              <Clock size={16} className="mt-0.5 sm:mt-0 shrink-0" aria-hidden="true" />
+              <span>Same-day service, 24/7 emergency response</span>
             </div>
 
             <p className="text-xl text-ink/70 mb-8 max-w-xl leading-relaxed">
